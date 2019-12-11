@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="row my-2">
+        <div class="col-lg-8 order-lg-2">
+            <div class="tab-content py-4">
+                <div class="tab-pane active" id="profile">
+                    <h4 class="mb-3">User Profile</h4>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>Name</h6>
+                            <p>
+                                {{userPosts?.name}}
+                            </p>
+                            <h6>User Name</h6>
+                            <p>
+                                {{userPosts?.username}}
+                            </p>
+                            <h6>Email</h6>
+                            <p>
+                                {{userPosts?.email}}
+                            </p>
+                            <h6>Website</h6>
+                            <p>
+                                {{userPosts?.website}}
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Address</h6>
+                            <p>
+                                <span class="font-weight-light">Street:</span> {{userPosts?.address?.street}}
+                            </p>
+                            <p>
+                                <span class="font-weight-light">Suite:</span> {{userPosts?.address?.suite}}
+                            </p>
+                            <p>
+                                <span class="font-weight-light">City:</span> {{userPosts?.address?.city}}
+                            </p>
+                            <p>
+                                <span class="font-weight-light">Zip Code:</span> {{userPosts?.address?.zipcode}}
+                            </p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h6>Company Details</h6>
+                            <p>
+                                <span class="font-weight-light">Name:</span> {{userPosts?.company?.name}}
+                            </p>
+                            <p>
+                                <span class="font-weight-light">Catch Phrase:</span> {{userPosts?.company?.catchPhrase}}
+                            </p>
+                            <p>
+                                <span class="font-weight-light">BS:</span> {{userPosts?.company?.bs}}
+                            </p>
+                        </div>
+                    </div>
+                    <app-posts (postsToChild)="postsForChild($event)" [posts]="userPosts.posts"></app-posts>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

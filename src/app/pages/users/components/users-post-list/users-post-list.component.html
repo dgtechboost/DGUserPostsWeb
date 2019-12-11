@@ -1,0 +1,21 @@
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>User Name</th>
+        <th>Posts</th>
+    </tr>
+    <tr *ngFor="let up of usersPosts">
+        <td>
+            {{up.name}}
+        </td>
+        <td>
+            {{up.username}}
+        </td>
+        <td>
+            {{up.posts?.length}}
+        </td>
+        <td>
+            <button class='btn btn-info' (click)="userDetails(up.id)"> Details</button>
+        </td>
+    </tr>
+</table>
