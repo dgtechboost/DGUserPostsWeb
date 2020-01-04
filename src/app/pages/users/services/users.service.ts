@@ -6,9 +6,7 @@ import { UserPostsModel } from '../models/user-posts.model';
 import { UsersPostListModel } from '../models/users-post-list.model';
 import { IUsersPostsService } from './users.service.interface';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class UsersPostsService implements IUsersPostsService {
   private baseUrl: string = "http://localhost:56189";
 

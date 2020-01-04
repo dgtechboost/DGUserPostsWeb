@@ -32,6 +32,6 @@ export class UsersPostListComponent implements OnInit {
   }
 
   userDetails(id: number) {
-    this.router.navigate([`/usersposts/user/${id}`]);
+    this.router.navigate([`/users/usersposts/user/${id}`]);
   }
 }

@@ -18,6 +18,7 @@ export class UserPostsComponent implements OnInit, OnDestroy {
     private usersPostsService: UsersPostsService,
     private route: ActivatedRoute
   ) {
+    this.userPosts = new UserPostsModel();
     this.subscription = this.route.params.subscribe(params => {
       this.userId = params['id'];
     })

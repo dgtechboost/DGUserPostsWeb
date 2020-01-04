@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { UsersPostListComponent } from './pages/users/components/users-post-list/users-post-list.component';
-import { UserPostsComponent } from './pages/users/components/user-posts/user-posts.component';
+import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [
+const routes: Routes = 
+[
   {
-    path: 'usersposts',
-    component: UsersPostListComponent
+    path: '',
+    redirectTo: 'users',
+    pathMatch: 'full'
   },
   {
-    path: 'usersposts/user/:id',
-    component: UserPostsComponent
-  },
+    path: 'users', 
+    loadChildren: () => import('./pages/users/users.module').then(m => m.UsersModule)
+  }
 ];
 
 @NgModule({

@@ -40,6 +40,7 @@ class AddressModel{
     zipcode: string;
     geo:GeoModel
     constructor(_params?: any) {
+        if (!_params) _params = {};
         this.street = _params.street;
         this.suite = _params.suite;
         this.city = _params.city;
@@ -52,6 +53,7 @@ class GeoModel{
     latitude: string;
     longitude: string;
     constructor(_params?: any) {
+        if (!_params) _params = {};
         this.latitude = _params.latitude;
         this.longitude = _params.longitude;
     }
@@ -62,6 +64,7 @@ class CompanyModel{
     catchPhrase: string;
     bs: string;
     constructor(_params?: any) {
+        if (!_params) _params = {};
         this.name = _params.name;
         this.catchPhrase = _params.catchPhrase;
         this.bs = _params.bs;
@@ -74,6 +77,7 @@ class PostListModel{
     title: string;
     body: string;
     constructor(_params?: any) {
+        if (!_params) _params = {};
         this.id = _params.id;
         this.userId = _params.userId;
         this.title = _params.title;
