@@ -1,0 +1,98 @@
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: #ffffff;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+}
+
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.navbar {
+    display: block;
+}
+
+.navbar-expand-sm .navbar-nav {
+    flex-direction: column;
+}
+
+
+@media (min-width: 576px){
+.navbar-expand-sm .navbar-collapse {
+    display: block !important;
+    flex-basis: auto;
+}
+}
+
+html {
+    font-size: 14px;
+}
+
+  .navbar-toggler{
+    float: right;
+}
+
+  .box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+/* If screen size is more than 768px wide, activate below styles*/
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px;
+    }
+
+    .main-nav {
+        height: 100%;
+        width: calc(25% - 20px);
+    }
+
+    .navbar {
+        border-radius: 0px;
+        border-width: 0px;
+        height: 100%;
+    }
+    .navbar-header {
+        float: none;
+    }
+    .navbar-collapse {
+        border-top: 1px solid #444;
+        padding: 0px;
+    }
+    .navbar ul {
+        float: none;
+    }
+    .navbar li {
+        float: none;
+        font-size: 15px;
+        margin: 6px;
+        width: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .navbar li a {
+        padding: 10px 16px;
+        border-radius: 4px;
+    }
+
+    .navbar a {
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+ }
+ 
+

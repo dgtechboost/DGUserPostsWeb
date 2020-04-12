@@ -6,12 +6,16 @@ import { UsersPostListComponent } from './components/users-post-list/users-post-
 const routes: Routes = [
     { 
         path: '', 
-        redirectTo: 'usersposts', 
+        redirectTo: 'userspostslist', 
         pathMatch: 'full' 
     },
     {
-        path: 'usersposts',
+        path: 'userspostslist',
         component: UsersPostListComponent
+    },
+    {
+        path: 'usersposts',
+        component: UserPostsComponent
     },
     {
         path: 'usersposts/user/:id',
